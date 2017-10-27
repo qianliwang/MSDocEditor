@@ -3,7 +3,7 @@ import os,sys
 from docx import Document
 '''
 To extract the content of the html and css files and put into a MS doc file. Then to edit the doc file and add programming
-hints into it.
+hints into it. The programming hint is related to the grading scale, and just added into the doc file.
 '''
 def getHTMLandCSSFile(folder):
     folderList = os.listdir(folder);
