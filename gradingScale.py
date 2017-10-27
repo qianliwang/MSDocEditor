@@ -2,8 +2,9 @@
 import os,sys
 from difflib import Differ
 '''
-The root folder contains folders for each chpater, this scripte would iterate all chapters, and aggregate the content of 
-html and css files under each chapter to a txt file.
+The root folder contains folders for each chpater. Since the whole book uses a same project as homework, each chapter just
+adds new knowledge point. So to generate grading scale, each two adjacent chapter content is compared, and the different 
+part is extracted and saved in a txt file.
 '''
 def getHTMLandCSSFile(folder):
     folderList = os.listdir(folder);
