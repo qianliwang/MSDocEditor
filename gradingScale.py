@@ -1,6 +1,10 @@
 '''For Grading Scale'''
 import os,sys
 from difflib import Differ
+'''
+The root folder contains folders for each chpater, this scripte would iterate all chapters, and aggregate the content of 
+html and css files under each chapter to a txt file.
+'''
 def getHTMLandCSSFile(folder):
     folderList = os.listdir(folder);
     fileList = [];
