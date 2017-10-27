@@ -3,6 +3,15 @@ from docx.shared import RGBColor
 from docx.shared import Inches
 import os,sys,re
 
+'''
+Each chapter has a quiz set. The procedure is to review all avaiable problems in each chapter. For each problem, recording 
+the related textbook pape number, the number of slide of this chapter, the correct answer(Single selection, A,B,C,D), 
+and the level of the problem represented by different colors(hard,medium,easy). Then these parameters are
+put into a txt file. Later, based on this txt input file, the related page number and the slide number are added into
+the head of each problem, the correct answer would be bolded, and the level of each problem is marked with different color.
+Finally, output the modified doc file. The second task is to extract certain number of problems as the condidate quiz
+problems and saved as another doc file. 
+'''
 def formatLine(line):
     pre1 = "p";
     pre2 = "slide ch8s";
@@ -88,7 +97,7 @@ for q in questionMarks:
     count += 1;
 
 #print candidateQuestionIndex;
-print "--------------------Save test.docx----------------------------";
+print "--------------------Save test_set.docx----------------------------";
 count = 0;
 tempPointer = 0;
 for p in d.paragraphs:
